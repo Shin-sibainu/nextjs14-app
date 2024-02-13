@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import Header from "./components/Header";
 
 //https://zenn.dev/nino/books/30e21d37af73b5/viewer/init-cloudflare
 
@@ -20,7 +21,10 @@ export default function RootLayout({
   return (
     <ClerkProvider afterSignInUrl="/" afterSignUpUrl="/onboarding">
       <html lang="ja">
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          <Header />
+          <main>{children}</main>
+        </body>
       </html>
     </ClerkProvider>
   );
