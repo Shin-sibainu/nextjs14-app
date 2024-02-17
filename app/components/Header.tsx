@@ -11,7 +11,7 @@ import React from "react";
 const Header = () => {
   return (
     <header>
-      <span>ロゴ</span>
+      <span>Next.js14 Blog</span>
       <SignedIn>
         <UserButton />
       </SignedIn>
